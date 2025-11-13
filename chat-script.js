@@ -225,7 +225,7 @@ function addMessage(sender, text) {
     
     const avatar = sender === 'user' 
         ? '👤' 
-        : '<img src="/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;">';
+                : '<img src="./public/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;">';
     
     messageDiv.innerHTML = `
         <div class="message-avatar">${avatar}</div>
@@ -244,7 +244,7 @@ function addLoadingIndicator() {
     loadingDiv.id = 'loading-message';
     
     loadingDiv.innerHTML = `
-        <div class="message-avatar"><img src="/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
+                <div class="message-avatar"><img src="./public/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
         <div class="message-content">
             <div class="loading-indicator">
                 <div class="loading-dot"></div>
@@ -276,7 +276,7 @@ function addAIResponse(queryType) {
     const responseTime = (config.responseTime / 1000).toFixed(1);
     
     messageDiv.innerHTML = `
-        <div class="message-avatar"><img src="/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
+                <div class="message-avatar"><img src="./public/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
         <div class="message-content">
             <div>${responseData.answer}</div>
             <div class="message-meta">
@@ -306,7 +306,7 @@ function addGenericResponse() {
     };
     
     messageDiv.innerHTML = `
-        <div class="message-avatar"><img src="/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
+                <div class="message-avatar"><img src="./public/images/mike-ai.png" alt="mike.ai" style="width: 100%; height: 100%; border-radius: 4px; object-fit: cover;"></div>
         <div class="message-content">
             <div>${responses[currentTier]}</div>
         </div>
