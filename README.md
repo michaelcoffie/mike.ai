@@ -55,18 +55,8 @@ This project was created to explore the ethical implications of tiered AI servic
 
 ### Opening the Website
 
-Simply open the `index.html` file in your web browser:
+Simply open this link in your web browser: https://michaelcoffie.github.io/mike.ai/
 
-**Option 1: Double-click**
-- Navigate to the project folder
-- Double-click on `index.html`
-
-**Option 2: Right-click**
-- Right-click on `index.html`
-- Choose "Open With" → Your preferred browser
-
-**Option 3: Drag and drop**
-- Drag `index.html` into an open browser window
 
 ### How to Use
 
