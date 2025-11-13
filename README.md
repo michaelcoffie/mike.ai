@@ -1,5 +1,7 @@
 # AI Subscription Tier Simulator
 
+**Link**: https://michaelcoffie.github.io/mike.ai/
+
 ## Overview
 
 This interactive website demonstrates how AI accuracy, speed, and features vary dramatically based on subscription tiers, highlighting critical issues of financial accessibility in artificial intelligence technology.
@@ -143,4 +145,4 @@ This project aims to make visible the often-invisible ways that financial resour
 **Institution**: University of Miami  
 **Semester**: Fall 2025  
 **Topic**: Financial Accessibility in AI Technology
-
+**Link**: https://michaelcoffie.github.io/mike.ai/
