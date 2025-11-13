@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mike.ai - Chat</title>
+    <link rel="icon" type="image/png" href="/images/mike-ai.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chat Interface Screen -->
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo-small" style="text-decoration: none; cursor: pointer; display: block;">
+                    <img src="/images/mike-ai.png" alt="AI" class="logo-image-small">
+                </a>
+                <button class="new-chat-btn" onclick="resetChat()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New chat
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="current-plan">
+                    <div class="plan-badge" id="sidebar-plan-name">Free Plan</div>
+                    <p class="plan-info" id="sidebar-plan-info">10 messages remaining today</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="sidebar-btn" onclick="window.location.href='index.html'">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Change Plan
+                </button>
+                <button class="sidebar-btn" onclick="window.location.href='reflection.html'">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Reflection
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-screen">
+                    <h2 id="welcome-tier-name">Free Plan</h2>
+                    <p id="welcome-tier-description">You're using the free tier. Responses may be limited in accuracy and detail.</p>
+                    
+                    <div class="example-prompts">
+                        <p class="prompts-label">Try asking about:</p>
+                        <div class="prompt-cards">
+                            <button class="prompt-card" onclick="sendExampleQuery('peanut-butter')">
+                                <div class="prompt-icon">🥜</div>
+                                <div class="prompt-text">Product Recalls</div>
+                                <div class="prompt-example">"Is peanut butter recalled?"</div>
+                            </button>
+                            <button class="prompt-card" onclick="sendExampleQuery('climate-change')">
+                                <div class="prompt-icon">🌍</div>
+                                <div class="prompt-text">Climate Information</div>
+                                <div class="prompt-example">"What is climate change?"</div>
+                            </button>
+                            <button class="prompt-card" onclick="sendExampleQuery('medical')">
+                                <div class="prompt-icon">⚕️</div>
+                                <div class="prompt-text">Health Questions</div>
+                                <div class="prompt-example">"I have cold symptoms"</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <textarea 
+                        id="chat-input" 
+                        placeholder="Send a message..." 
+                        rows="1"
+                        onkeydown="handleKeyDown(event)"
+                    ></textarea>
+                    <button class="send-button" onclick="sendMessage()" id="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-disclaimer">mike.ai may produce inaccurate information. Quality varies by subscription tier.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="chat-script.js"></script>
+</body>
+</html>
+

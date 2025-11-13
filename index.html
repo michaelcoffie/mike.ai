@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mike.ai - Choose Your Plan</title>
+    <link rel="icon" type="image/png" href="/images/mike-ai.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome/Tier Selection Screen -->
+    <div id="tier-selection" class="screen active" style="display: block;">
+        <div class="container">
+            <header class="header">
+                <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
+                    <img src="/images/mike-ai.png" alt="mike.ai" class="logo-image">
+                    <span>mike.ai</span>
+                </a>
+                <a href="reflection.html" class="reflection-link">Reflection</a>
+            </header>
+
+            <div class="hero">
+                <h1>Get started with mike.ai</h1>
+                <p class="hero-subtitle">Choose the plan that works best for you</p>
+            </div>
+
+            <div class="pricing-container">
+                <div class="pricing-cards">
+                    <!-- Free Plan -->
+                    <div class="pricing-card" onclick="selectTier('free')">
+                        <div class="plan-header">
+                            <h3>Free</h3>
+                            <div class="plan-price">
+                                <span class="price">$0</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Limited response accuracy</li>
+                            <li>Standard response time</li>
+                            <li>10 messages per day</li>
+                            <li>Basic support</li>
+                        </ul>
+                        <button class="plan-button secondary">Try Free</button>
+                    </div>
+
+                    <!-- Standard Plan -->
+                    <div class="pricing-card featured" onclick="selectTier('standard')">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h3>Standard</h3>
+                            <div class="plan-price">
+                                <span class="price">$20</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Improved response accuracy</li>
+                            <li>Faster response time</li>
+                            <li>500 messages per day</li>
+                            <li>Email support</li>
+                            <li>Basic source citations</li>
+                        </ul>
+                        <button class="plan-button primary">Get Started</button>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="pricing-card" onclick="selectTier('premium')">
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="plan-price">
+                                <span class="price">$200</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Highest accuracy & detail</li>
+                            <li>Priority processing</li>
+                            <li>Unlimited messages</li>
+                            <li>24/7 priority support</li>
+                            <li>Full source verification</li>
+                            <li>Complete privacy protection</li>
+                        </ul>
+                        <button class="plan-button secondary">Upgrade to Premium</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>This is a simulation demonstrating how subscription tiers affect mike.ai response quality and accuracy.</p>
+            </div>
+
+            <footer class="project-footer">
+                <p class="footer-text">
+                    <strong>Academic Simulation Project</strong><br>
+                    Social and Ethical Issues in Computing<br>
+                    University of Miami | Fall 2025
+                </p>
+                <p class="footer-credit">
+                    Created by <strong>Michael Coffie</strong>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function selectTier(tier) {
+            window.location.href = `chat.html?tier=${tier}`;
+        }
+    </script>
+</body>
+</html>

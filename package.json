@@ -1,0 +1,23 @@
+{
+  "name": "ai-subscription-tier-simulator",
+  "version": "1.0.0",
+  "description": "Interactive website demonstrating AI subscription tier disparities",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "ai",
+    "ethics",
+    "accessibility",
+    "social-computing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+
